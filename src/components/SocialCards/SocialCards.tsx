@@ -7,8 +7,7 @@ import usersStore from '../../store/UsersStore';
 
 const SocialCards = observer(() => {
   useEffect(() => {
-    console.log('i fire once');
-    // usersStore.getMoreUsers();
+    usersStore.getMoreUsers();
   }, []);
 
   const click = () => {
