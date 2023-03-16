@@ -1,0 +1,17 @@
+.header {
+  background: #e7e7e7;
+}
+
+.wrap {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: 700;
+}

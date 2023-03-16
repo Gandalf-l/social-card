@@ -1,0 +1,24 @@
+.socialCardWrap {
+  display: grid;
+  grid-template-columns: minmax(100px, 2fr) 3fr;
+  width: 100%;
+  max-width: 640px;
+  height: 260px;
+  border-radius: 10px;
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.04);
+  @media all and (max-width: 765px) {
+
+  }
+}
+
+.avatarBg {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background: linear-gradient(135deg, #F395BA 0%, #FED182 100%);
+  border-radius: 10px 0 0 10px;
+}
+
+.name {
+
+}

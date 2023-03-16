@@ -1,0 +1,10 @@
+.socialCardsWrap {
+  display: grid;
+  margin: 20px 60px 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px 25px;
+
+  @media all and (max-width: 1350px) {
+    margin: 20px 20px 10px;
+  }
+}

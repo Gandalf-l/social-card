@@ -1,0 +1,16 @@
+.avatarName {
+  display: grid;
+  border-radius: 50%;
+  background-color: #505050;
+  color: #ffffff;
+  align-items: center;
+  font-size: 50px;
+}
+
+.avatar {
+  display: grid;
+  width: 100%;
+  max-width: 145px;
+  height: 145px;
+  text-align: center;
+}
