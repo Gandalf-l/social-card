@@ -25,10 +25,6 @@ class UsersApi {
         });
       });
   }
-
-  getPhoto() {
-
-  }
 }
 
 export default new UsersApi();

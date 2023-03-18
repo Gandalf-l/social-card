@@ -1,14 +1,16 @@
 .socialCardWrap {
   display: grid;
-  grid-template-columns: minmax(100px, 2fr) 3fr;
+  grid-template-columns: minmax(150px, 2fr) 3fr;
   width: 100%;
   max-width: 640px;
-  height: 260px;
   border-radius: 10px;
   box-shadow: 0 16px 42px rgba(0, 0, 0, 0.04);
-  @media all and (max-width: 765px) {
+  cursor: pointer;
 
+  @media all and (max-width: 1024px) {
+    grid-template-columns: none;
   }
+
 }
 
 .avatarBg {
@@ -17,8 +19,102 @@
   align-items: center;
   background: linear-gradient(135deg, #F395BA 0%, #FED182 100%);
   border-radius: 10px 0 0 10px;
+
+  @media all and (max-width: 1024px) {
+    border-radius: 10px 10px 0 0;
+    padding: 25px 0;
+  }
+}
+
+.detailsWrap {
+  display: grid;
+  padding: 25px 10px 25px 25px;
+
+  @media all and (max-width: 1024px) {
+    padding: 15px 10px 24px 24px;
+  }
 }
 
 .name {
+  font-family: 'DM Serif Display', sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 30px;
+  margin-bottom: 15px;
+  color: #081F32;
 
+  @media all and (max-width: 1024px) {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 13px;
+  }
+}
+
+.contentWrap {
+  display: grid;
+  grid-row-gap: 10px;
+
+  @media all and (max-width: 1024px) {
+    grid-row-gap: 14px;
+  }
+}
+
+.text {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  align-items: center;
+  grid-column-gap: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-decoration: none;
+  color: #374A59;
+
+  @media all and (max-width: 1024px) {
+    line-height: 15px;
+  }
+}
+
+.textLink {
+  text-decoration: none;
+  color: #374A59;
+}
+
+.company {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-column-gap: 15px;
+  margin: 30px 0 0;
+  justify-content: start;
+
+  @media all and (max-width: 1024px) {
+    margin: 25px 0 0;
+  }
+}
+
+.companyDetails {
+  font-family: 'SF Pro Text', serif;
+  display: grid;
+  grid-row-gap: 3px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #555A66;
+}
+
+.companyName {
+  font-style: normal;
+  font-weight: 600;
+}
+
+.catchPhrase {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.link {
+  color: #007AE9;
+  text-decoration: none;
 }

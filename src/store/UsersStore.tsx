@@ -1,22 +1,48 @@
 import { makeAutoObservable } from 'mobx';
 import { UserI } from '../common/interfaces/User.interface';
-import userApi from '../api/UsersApi'
+import userApi from '../api/UsersApi';
+import loaderStore from './LoaderStore';
+import getId from '../common/helpers/getId';
 
 class UsersStore {
   users: UserI[] = [];
 
   constructor() {
-    makeAutoObservable(this)
+    makeAutoObservable(this);
   }
 
-   *getMoreUsers() {
-    const users = yield this.fetchSocialCards();
-    this.users = [...this.users, ...users];
+  * getMoreUsers() {
+    loaderStore.loadStart();
+    const users = yield userApi.getUsers();
+    loaderStore.loadEnd();
+    this.users = [...this.users, ...users, ...users.map((user) => {
+      return {
+        ...user, id: getId()
+      };
+    })];
   }
 
-  fetchSocialCards() {
-    return userApi.getUsers();
+  addUser(user: UserI) {
+    this.users = [{ ...user, id: getId() }, ...this.users];
+  }
+
+  editUser(user: UserI) {
+    this.users = this.users.map((data) => {
+      console.log(user, data);
+      if (user.id === data.id) {
+        console.log(user, data);
+        return {
+          ...data,
+          ...user
+        };
+      }
+      return data;
+    });
+  }
+
+  getUserById(id: number): UserI {
+    return this.users.find((user) => user.id === id);
   }
 }
 
-export default new UsersStore()
+export default new UsersStore();

@@ -1,3 +1,7 @@
+.wrap {
+  display: grid;
+  justify-content: center;
+}
 .socialCardsWrap {
   display: grid;
   margin: 20px 60px 10px;
@@ -7,4 +11,12 @@
   @media all and (max-width: 1350px) {
     margin: 20px 20px 10px;
   }
+
+  @media all and (max-width: 768px) {
+    grid-template-columns: none;
+  }
+}
+
+.socialCards {
+  display: grid;
 }
