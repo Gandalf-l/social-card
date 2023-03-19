@@ -16,4 +16,4 @@ class LoaderStore {
   }
 }
 
-export default new LoaderStore()
+export default new LoaderStore();

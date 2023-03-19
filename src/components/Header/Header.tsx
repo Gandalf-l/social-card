@@ -21,7 +21,7 @@ const Header = () => {
     usersStore.addUser(user);
     message.success('Success create user!');
     onClose();
-  }
+  };
 
   return (
     <header className={styles.header}>

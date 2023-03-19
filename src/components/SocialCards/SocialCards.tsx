@@ -30,10 +30,10 @@ const SocialCards = observer(() => {
     usersStore.editUser({ ...user, id });
     message.success('Success edit user!');
     onClose();
-  }
+  };
 
   const loadMore = () => {
-    usersStore.getMoreUsers()
+    usersStore.getMoreUsers();
   };
 
   return (
@@ -49,7 +49,7 @@ const SocialCards = observer(() => {
           })}
         </div>
         <Drawer title='Edit social card' placement='right' onClose={onClose} open={open}>
-          {open && <SocialCardForm finish={(data, id) => onFinish(data, id)} user={editedUser}/>}
+          {open && <SocialCardForm finish={(data, id) => onFinish(data, id)} user={editedUser} />}
         </Drawer>
         <Button type='primary' onClick={loadMore} size='large'>Load more</Button>
       </div>

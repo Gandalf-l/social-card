@@ -4,7 +4,7 @@ import { UserI } from '../../common/interfaces/User.interface';
 
 import styles from './SocialCard.module.scss';
 import iconSet from '../../icomoon/selection.json';
-import IcomoonReact  from 'icomoon-react';
+import IcomoonReact from 'icomoon-react';
 import CompanyIcon from './CompanyIcon';
 import Avatar from '../Avatar/Avatar';
 

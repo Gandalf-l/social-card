@@ -1,5 +1,5 @@
 export interface UserI {
-  id: number
+  id: number;
   imgUrl: string;
   name: string;
   email: string;
@@ -11,8 +11,8 @@ export interface UserI {
   };
   company: {
     name: string,
-    catchPhrase: "Multi-layered client-server neural-net",
-  }
+    catchPhrase: 'Multi-layered client-server neural-net',
+  };
   phone: string;
-  website: string
+  website: string;
 }
