@@ -28,9 +28,7 @@ class UsersStore {
 
   editUser(user: UserI) {
     this.users = this.users.map((data) => {
-      console.log(user, data);
       if (user.id === data.id) {
-        console.log(user, data);
         return {
           ...data,
           ...user
